@@ -1,10 +1,9 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
-<% if current_user.advisor? %>
+<% if current_user.try(:advisor?) %>
   <p>Invite Users</p>
 <% end %>
 
-<h1>Pins</h1>
 
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
