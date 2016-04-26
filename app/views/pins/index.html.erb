@@ -1,5 +1,11 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+<% if current_user.advisor? %>
+  <p>Invite Users</p>
+<% end %>
+
+<h1>Pins</h1>
+
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
