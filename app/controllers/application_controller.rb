@@ -4,7 +4,14 @@ class ApplicationController < ActionController::Base
  protect_from_forgery with: :exception
  before_filter :configure_permitted_parameters, if: :devise_controller?
 
-protected
+ before_action :set_account
+ 
+ def set_account
+  @account = Account.find_by(subdomain: request.subdomain)
+  byebug
+ end
+ 
+ protected
 
  def configure_permitted_parameters
    devise_parameter_sanitizer.for(:sign_up) << :name
