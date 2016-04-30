@@ -1,0 +1,41 @@
+<% if current_user.try(:advisor?) %>
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Invite <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Your Members</a></li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Other Organization</a></li>
+  </ul>
+  </li>
+<% end %>
+
+<% if current_user.try(:group_member?) %>
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Invite <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Fellow Members</a></li>
+    <li><a href="#">Other Organization</a></li>
+  </ul>
+  </li>
+<% end %>
+
+<% if current_user.try(:sender?) %>
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Invite <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Refer a Friend</a></li>
+    <li><a href="#">Refer an Organization</a></li>
+  </ul>
+  </li>
+<% end %>
+
+<% if current_user.try(:sales_person?) %>
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Invite <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Refer a Friend</a></li>
+    <li><a href="#">Refer an Organization</a></li>
+  </ul>
+  </li>
+<% end %>

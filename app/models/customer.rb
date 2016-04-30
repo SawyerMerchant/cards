@@ -1,4 +1,4 @@
-class Member < User
+class Customer < User
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   

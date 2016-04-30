@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
  
  def set_account
   @account = Account.find_by(subdomain: request.subdomain)
-  byebug
+  
  end
  
  protected
