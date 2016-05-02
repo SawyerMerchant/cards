@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   resources :orders
   resources :pins
-  devise_for :users, :advisors
+  devise_for :users, :advisors, :clients
   root "pins#index"
   get "about" => "pages#about"
   
   #remove routing errors while developing
   match ':controller(/:action(/:id))', :via => :get
   
-  # devise_for :advisors
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

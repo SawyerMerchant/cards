@@ -28,7 +28,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 #required for mailgun - not really
 #gem 'mail', '~> 2.6'
-gem 'lob'
+gem 'byebug', '~>8.2.5'
 
 group :development, :test do
   gem 'sqlite3'
