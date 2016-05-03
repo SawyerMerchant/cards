@@ -29263,3 +29263,26 @@ Processing by PinsController#index as HTML
   Rendered layouts/_links.invite.html.erb (0.5ms)
   Rendered layouts/_header.html.erb (3.0ms)
 Completed 200 OK in 72717ms (Views: 441.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 96.252.215.246 at 2016-05-03 14:43:04 +0000
+Cannot render console from 96.252.215.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PinsController#index as HTML
+  [1m[35mAccount Load (0.3ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."subdomain" = ? LIMIT 1  [["subdomain", "cards-sawyermerchant"]]
+  Rendered pages/_home.html.erb (1.1ms)
+  [1m[36mPin Load (0.4ms)[0m  [1mSELECT  "pins".* FROM "pins"  ORDER BY created_at DESC LIMIT 20 OFFSET 0[0m
+  Rendered pins/index.html.erb within layouts/application (49.3ms)
+  Rendered layouts/_links.invite.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 6622ms (Views: 543.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/about" for 96.252.215.246 at 2016-05-03 14:43:20 +0000
+Cannot render console from 96.252.215.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#about as HTML
+  [1m[35mAccount Load (0.4ms)[0m  SELECT  "accounts".* FROM "accounts" WHERE "accounts"."subdomain" = ? LIMIT 1  [["subdomain", "cards-sawyermerchant"]]
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_links.invite.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 11419ms (Views: 174.5ms | ActiveRecord: 0.4ms)
